@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import '../../styles.css';
 
 export const Monalisa = ({props}) => {
@@ -16,28 +15,51 @@ export const Monalisa = ({props}) => {
     }
   }
 
-  React.useEffect(async () => {
-    await axios.get(`https://vblinds.herokuapp.com/api/screens/${screenId}/screenVideos`)
-      .then((res) => {
-        setVideos(res.data);
-        console.log(res.data)
-      }).then(() => {
-        resetTimeout();
-        timeoutRef.current = setTimeout(
-          () => 
-            setIndex((prevIndex) => 
-              prevIndex === videos.length - 1 ? 0 : prevIndex + 1
-            ),
-            delay
-        );
-      })
-    return () => {
-      resetTimeout();
-    };
-  }, [
-    index, 
-    videos
-  ]);
+  React.useEffect(() => {
+    const fetch = async () => {
+      try {
+        const response  = await window.fetch(`https://vblinds.herokuapp.com/api/screens/${screenId}/screenVideos`)
+        console.log(response)
+        const data = await response.json();
+        setVideos(data)
+        console.log(data)
+        resetTimeout()
+        timeoutRef.current = setTimeout(() => {
+          setIndex(prevIndex => (prevIndex === videos.length - 1 ? 0 : prevIndex + 1))
+        }, delay)
+      } catch (r) {
+        console.error(r)
+      }
+    }
+    fetch()
+  }, [])
+  React.useEffect(
+    () => () => {
+      resetTimeout()
+    },
+    []
+  )
+  // React.useEffect(async () => {
+  //   await axios.get(`https://vblinds.herokuapp.com/api/screens/${screenId}/screenVideos`)
+  //     .then((res) => {
+  //       setVideos(res.data);
+  //       console.log(res.data)
+  //     }).then(() => {
+  //       resetTimeout();
+  //       timeoutRef.current = setTimeout(
+  //         () => 
+  //           setIndex((prevIndex) => 
+  //             prevIndex === videos.length - 1 ? 0 : prevIndex + 1
+  //           ),
+  //           delay
+  //       );
+  //     })
+  //   return () => {
+  //     resetTimeout();
+  //   };
+  // }, [
+  //   index
+  // ]);
 
   return (
     <div>

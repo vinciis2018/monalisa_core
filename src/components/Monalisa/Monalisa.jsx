@@ -2,10 +2,10 @@ import React from 'react';
 import '../../styles.css';
 
 export const Monalisa = ({props}) => {
-  const screenId = props;
-  // const screenId = "61e1532b4cdb8cfa375286da";
+  // const screenId = props;
+  const screenId = "61e1532b4cdb8cfa375286da";
   const [index, setIndex] = React.useState(0);
-  const delay = 1000;
+  const delay = 2500;
   const timeoutRef = React.useRef(null);
   const [videos, setVideos] = React.useState([]);
 
@@ -19,7 +19,6 @@ export const Monalisa = ({props}) => {
     const fetch = async () => {
       try {
         const response  = await window.fetch(`https://vblinds.herokuapp.com/api/screens/${screenId}/screenVideos`)
-        console.log(response)
         const data = await response.json();
         setVideos(data)
         console.log(data)
@@ -32,7 +31,7 @@ export const Monalisa = ({props}) => {
       }
     }
     fetch()
-  }, [])
+  }, [index])
   React.useEffect(
     () => () => {
       resetTimeout()
@@ -63,26 +62,22 @@ export const Monalisa = ({props}) => {
 
   return (
     <div>
-      <div className="">
-        <div className="slideshow">
-          <div 
-            className="slideshowSlider" 
-            style={{transform: `translate3d(${-index * 100}%, 0, 0)`}}
-            >
-              {videos ? videos.map((video, index) => (
-                <a key={video._id} href={`https://vblinds.herokuapp.com/video/${video._id}`}>
-                  <img 
-                  className="slide"
-                  key={index}
-                  src={video.thumbnail}
-                  alt={video.name}
-                  >
-                  </img>
-                </a>
-              )) : (
-              <h3>Monalisa By Vinciis</h3>
-              )}
-          </div>
+      <div className="slideshow">
+        <div 
+          className="slideshowSlider" 
+          style={{transform: `translate3d(${-index * 100}%, 0, 0)`}}
+          >
+            {videos.map((video, index) => (
+              <a key={video._id} href={`https://vblinds.herokuapp.com/video/${video._id}`} target="_blank" rel="noopener noreferrer">
+                <img 
+                className="slide"
+                key={index}
+                src={video.thumbnail}
+                alt={video.name}
+                >
+                </img>
+              </a>
+            ))}
         </div>
       </div>
     </div>

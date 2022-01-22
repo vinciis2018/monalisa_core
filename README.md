@@ -16,7 +16,7 @@ and call the Monalisa component in a div of your react app
 
 ```JavaScript
  <div>
-   <Monalisa props={{screenId}} />
+   <Monalisa props={(screenId)} />
  </div>
 ```
 

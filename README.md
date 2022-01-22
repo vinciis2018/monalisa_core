@@ -20,4 +20,11 @@ and call the Monalisa component in a div of your react app
  </div>
 ```
 
-get your screenId by contacting itisvinciis@gmail.com
+for changing the size of the component, use a css class and call the api within it... 
+
+```JavaScript
+  <div className="container">
+    <Monalisa props={(screenId)} />
+  </div>
+```
+for more details and for getting your screenId by contacting itisvinciis@gmail.com

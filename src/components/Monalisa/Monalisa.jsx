@@ -6,7 +6,7 @@ export const Monalisa = ({props}) => {
   const screenId = props;
   // const screenId = "61e1532b4cdb8cfa375286da";
   const [index, setIndex] = React.useState(0);
-  const delay = 5000;
+  const delay = 1000;
   const timeoutRef = React.useRef(null);
   const [videos, setVideos] = React.useState([]);
 
@@ -48,13 +48,15 @@ export const Monalisa = ({props}) => {
             style={{transform: `translate3d(${-index * 100}%, 0, 0)`}}
             >
               {videos ? videos.map((video, index) => (
-                <img 
-                className="slide"
-                key={index}
-                src={video.thumbnail}
-                alt={video.name}
-                >
-                </img>
+                <a key={video._id} href={`https://vblinds.herokuapp.com/video/${video._id}`}>
+                  <img 
+                  className="slide"
+                  key={index}
+                  src={video.thumbnail}
+                  alt={video.name}
+                  >
+                  </img>
+                </a>
               )) : (
               <h3>Monalisa By Vinciis</h3>
               )}

@@ -24,7 +24,7 @@ for changing the size of the component, use a css class and call the api within 
 
 ```JavaScript
   <div className="container">
-    <Monalisa props={(screenId)} />
+    <Monalisa screen={(screenId)} />
   </div>
 ```
 for more details and for getting your screenId by contacting itisvinciis@gmail.com

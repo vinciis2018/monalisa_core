@@ -19,31 +19,3 @@
   border-radius: 5px;
 }
 
-section.slideshow{
-  width: 80%;
-}
-section.slideshow div.slide-holder{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-}
-section.slideshow section.current-slide{
-  width: 400px;
-  height: 300px;
-  margin: auto 10px;
-}
-section.slideshow section.previous-slide,
-section.slideshow section.next-slide{
-  width: 200px;
-  height: 150px;
-}
-section.slideshow section.slide div.slide-thumbnail{
-  width: 100%;
-  height: 100%;
-  background: #541d82;
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  box-shadow: 5px 5px 6px #551d829c;
-}

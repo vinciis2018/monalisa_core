@@ -4,8 +4,9 @@ import '../../styles.css';
 export const Monalisa = ({screen}) => {
   const screenId = screen;
   // const screenId = "61e1532b4cdb8cfa375286da";
+  // const screenId = "61e10b9fe679b4afaf09b3a9";
   const [index, setIndex] = React.useState(0);
-  const delay = 2500;
+  const delay = 5000;
   const timeoutRef = React.useRef(null);
   const [videos, setVideos] = React.useState([]);
 
@@ -24,7 +25,7 @@ export const Monalisa = ({screen}) => {
         console.log(data)
         resetTimeout()
         timeoutRef.current = setTimeout(() => {
-          setIndex(prevIndex => (prevIndex === videos.length - 1 ? 0 : prevIndex + 1))
+          setIndex(prevIndex => (prevIndex === (videos.length - 1 || videos.length) ? 0 : prevIndex + 1))
         }, delay)
       } catch (r) {
         console.error(r)
@@ -32,33 +33,6 @@ export const Monalisa = ({screen}) => {
     }
     fetch()
   }, [index])
-  React.useEffect(
-    () => () => {
-      resetTimeout()
-    },
-    []
-  )
-  // React.useEffect(async () => {
-  //   await axios.get(`https://vblinds.herokuapp.com/api/screens/${screenId}/screenVideos`)
-  //     .then((res) => {
-  //       setVideos(res.data);
-  //       console.log(res.data)
-  //     }).then(() => {
-  //       resetTimeout();
-  //       timeoutRef.current = setTimeout(
-  //         () => 
-  //           setIndex((prevIndex) => 
-  //             prevIndex === videos.length - 1 ? 0 : prevIndex + 1
-  //           ),
-  //           delay
-  //       );
-  //     })
-  //   return () => {
-  //     resetTimeout();
-  //   };
-  // }, [
-  //   index
-  // ]);
 
   return (
     <div>

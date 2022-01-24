@@ -62,15 +62,15 @@ export const Monalisa = ({props}) => {
 
   return (
     <div>
-      <div className="slideshow">
+      <div className="monalisa_slideshow">
         <div 
-          className="slideshowSlider" 
+          className="monalisa_slideshowSlider" 
           style={{transform: `translate3d(${-index * 100}%, 0, 0)`}}
           >
             {videos.map((video, index) => (
               <a key={video._id} href={`https://vblinds.herokuapp.com/video/${video._id}`} target="_blank" rel="noopener noreferrer">
                 <img 
-                className="slide"
+                className="monalisa_slide"
                 key={index}
                 src={video.thumbnail}
                 alt={video.name}

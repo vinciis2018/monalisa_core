@@ -1,15 +1,15 @@
-.slideshow {
+.monalisa_slideshow {
   margin: 0 auto;
   overflow: hidden;
   max-width: 100%;
 }
 
-.slideshowSlider {
+.monalisa_slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;
 }
 
-.slide {
+.monalisa_slide {
   display: inline-block flex;
   justify-content: center;
   align-items: center;
@@ -17,8 +17,4 @@
   height: 200px;
   max-height: 10%;
   border-radius: 5px;
-}
-
-h3 {
-  font-family: sans-serif;
 }

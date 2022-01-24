@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../styles.css';
 
-export const Monalisa = ({props}) => {
-  const screenId = props;
+export const Monalisa = ({screen}) => {
+  const screenId = screen;
   // const screenId = "61e1532b4cdb8cfa375286da";
   const [index, setIndex] = React.useState(0);
   const delay = 2500;

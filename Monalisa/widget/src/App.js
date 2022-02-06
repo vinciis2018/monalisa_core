@@ -1,5 +1,4 @@
-// import './App.css';
-import {Monalisa} from './components/Monalisa/index'
+import {Monalisa} from 'tsmona'
 
 function App() {
   const screenId="61e1532b4cdb8cfa375286da"
@@ -7,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <Monalisa screen={screenId}/>
+      <Monalisa screen={(screenId)}/>
     </div>
   );
 }

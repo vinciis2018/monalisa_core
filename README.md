@@ -48,7 +48,7 @@ go to you wordpress admin panel and click on "Plugins" tab in the sidebar to see
 
 if all goes well,
 
-go the the page you want to add the "Mona-Window", add shortcode from the add block option and time the following in the shortcode block input
+go the the page you want to add the "Mona-Window", add shortcode from the add block option and type the following in the shortcode block input
 
 ```JavaScript
 [erw-monalisa]

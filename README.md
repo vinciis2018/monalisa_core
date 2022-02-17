@@ -1,5 +1,5 @@
 # By Vinciis
-## npm React
+
 ### Monalisa is the flagship API by Vinciis for affliated advertising on web assets. for using, install the package by using
 
 ```JavaScript

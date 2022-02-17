@@ -3,7 +3,7 @@ import '../../styles.css';
 
 export const Monalisa = ({screen, monaName}) => {
   const screenId = screen;
-  const monaClass = monaName;
+  const monaClass = monaName ? monaName : 'monalisa_slideshow_full';
   // const screenId = "61e1532b4cdb8cfa375286da";
   // const monaClass = "monalisa_slideshow_240";
   const [index, setIndex] = React.useState(0);

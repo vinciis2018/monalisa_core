@@ -14,14 +14,14 @@ and call the Monalisa component in a div of your react app
 
 ```JavaScript
  <div>
-   <Monalisa screen={(screenId)} />
+   <Monalisa screen={screenId} monaName={monaName} />
  </div>
 ```
 for changing the size of the component, use a css class and call the api within it...
 
 ```JavaScript
   <div className="container">
-    <Monalisa screen={(screenId)} />
+    <Monalisa screen={screenId} monaName={monaName}/>
   </div>
 ```
 

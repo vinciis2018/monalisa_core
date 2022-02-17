@@ -1,13 +1,9 @@
-.monalisa_slideshow {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 100%;
-}
 
 .monalisa_slideshowSlider {
   white-space: nowrap;
   position: relative;
   transition: ease 1000ms;
+  height: 100%;
 }
 
 .monalisa_slide {
@@ -15,13 +11,74 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 200px;
   max-height: 10%;
   border-radius: 5px;
   transition: .5s ease;
 }
 
-
-.monalisa_slideshowSlider:hover .monalisa_slide {
+.monalisa_slide:hover {
   opacity: 0.8;
+}
+
+.monalisa_slideshow_1 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 10rem;
+}
+
+.monalisa_slideshow_100 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 10rem;
+}
+
+.monalisa_slideshow_240 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 240rem;
+}
+
+.monalisa_slideshow_480 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 48rem;
+}
+
+.monalisa_slideshow_540 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 54rem;
+}
+
+.monalisa_slideshow_720 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 72rem;
+}
+
+.monalisa_slideshow_1080 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 108rem;
+}
+
+.monalisa_slideshow_2160 {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 216rem;
+}
+
+.monalisa_slideshow_full {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  height: 100%;
 }

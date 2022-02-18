@@ -46,7 +46,7 @@ export const Monalisa = ({screen, monaName}) => {
       <div className={monaClass}>
         <div className="monalisa_slideshowSlider" style={{transform: `translate3d(${-index * 100}%, 0, 0)`}}>
           {videos.map((video) => (
-            <a key={video._id} aria-label="Blinds by Vinciis" href={`https://vblinds.herokuapp.com/video/${video._id}`} target="_blank" rel="noopener noreferrer">
+            <a key={video._id} aria-label="Blinds by Vinciis" href={`https://vblinds.herokuapp.com/video/${video._id}/${txId}`} target="_blank" rel="noopener noreferrer">
               <img 
                 className="monalisa_slide"
                 title="Blinds by Vinciis"
